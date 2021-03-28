@@ -1,15 +1,139 @@
 <html>
-    <head>
-        <title>Battleship game</title>
-        <meta charset="UTF-8">
-     
-    </head>
-    <body>
-        <header id="main-header">
-            <h1>Play battleship game!</h1>
-        </header>
-        
-         <script src="battleship.js"></script>
-    </body>
 
+<head>
+    <title>Battleship</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="battleship.css">
+
+</head>
+
+<body>
+
+ <h1 class="title"><span class="blue">&lt;</span>Battleship<span class="blue">&gt;</span><span class="yellow">JS</span></h1>
+
+ 
+
+ <div class="play_container">
+   <div class="demo-flex-spacer"></div>
+
+
+       <form class="webflow-style-input">
+         <input type="text" placeholder="A0" id="guessInput" style='text-transform:uppercase'/>
+         <button type="button" id="fireButton">
+           <i class="icon ion-android-arrow-forward"></i>
+         </button>
+       </form>
+
+   
+
+
+ </div>
+ <div id="messageArea" class="message"></div>
+ <div id="board">
+
+   <table class="container">
+     <thead>
+       <tr>
+         <th>
+         </th>
+         <th>
+           <h1>0</h1></th>
+           <th>
+             <h1>1</h1></th>
+             <th>
+               <h1>2</h1></th>
+               <th>
+                 <h1>3</h1></th>
+                 <th>
+                   <h1>4</h1></th>
+                   <th>
+                     <h1>5</h1></th>
+                     <th>
+                       <h1>6</h1></th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <!-- battleship row 0 -->
+                     <tr>
+                       <td>A</td>
+                       <td id="00">A0</td>
+                       <td id="01">A1</td>
+                       <td id="02">A2</td>
+                       <td id="03">A3</td>
+                       <td id="04">A4</td>
+                       <td id="05">A5</td>
+                       <td id="06">A6</td>
+                     </tr>
+                     <!-- battleship row 1 -->
+                     <tr>
+                       <td>B</td>
+                       <td id="10">B0</td>
+                       <td id="11">B1</td>
+                       <td id="12">B2</td>
+                       <td id="13">B3</td>
+                       <td id="14">B4</td>
+                       <td id="15">B5</td>
+                       <td id="16">B6</td>
+                     </tr>
+                     <!-- battleship row 2 -->
+                     <tr>
+                       <td>C</td>
+                       <td id="20">C0</td>
+                       <td id="21">C1</td>
+                       <td id="22">C2</td>
+                       <td id="23">C3</td>
+                       <td id="24">C4</td>
+                       <td id="25">C5</td>
+                       <td id="26">C6</td>
+                     </tr>
+                     <!-- battleship row 3 -->
+                     <tr>
+                       <td>D</td>
+                       <td id="30">D0</td>
+                       <td id="31">D1</td>
+                       <td id="32">D2</td>
+                       <td id="33">D3</td>
+                       <td id="34">D4</td>
+                       <td id="35">D5</td>
+                       <td id="36">D6</td>
+                     </tr>
+                     <!-- battleship row 4 -->
+                     <tr>
+                       <td>E</td>
+                       <td id="40">E0</td>
+                       <td id="41">E1</td>
+                       <td id="42">E2</td>
+                       <td id="43">E3</td>
+                       <td id="44">E4</td>
+                       <td id="45">E5</td>
+                       <td id="46">E6</td>
+                     </tr>
+                     <!-- battleship row 5 -->
+                     <tr>
+                       <td>F</td>
+                       <td id="50">F0</td>
+                       <td id="51">F1</td>
+                       <td id="52">F2</td>
+                       <td id="53">F3</td>
+                       <td id="54">F4</td>
+                       <td id="55">F5</td>
+                       <td id="56">F6</td>
+                     </tr>
+                     <!-- battleship row 6 -->
+                     <tr>
+                       <td>G</td>
+                       <td id="60">G0</td>
+                       <td id="61">G1</td>
+                       <td id="62">G2</td>
+                       <td id="63">G3</td>
+                       <td id="64">G4</td>
+                       <td id="65">G5</td>
+                       <td id="66">G6</td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+
+
+</body>
 </html>

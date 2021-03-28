@@ -1,0 +1,253 @@
+html { box-sizing: border-box; font-size: 10px; }
+*, *:before, *:after { box-sizing: inherit; }
+body, ul, li  { margin: 0; padding: 0; }
+li { list-style: none; }
+p, h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+a { text-decoration: none; }
+input { border-style: none; background: transparent; outline: none; }
+button { padding: 0; background: none; border: none; outline: none; }
+form {margin: 0;padding: 0;border: 0;font-size: 100%; font: inherit; vertical-align: baseline;}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #A7A1AE;
+  background-color: #1F2739;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #4DC3FA;
+}
+
+h2 {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.1em;
+  padding-bottom: 2.2em;
+  color: #FEFEFE;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.blue { color: #185875;}
+.yellow { color: #FFF842;}
+
+.title {
+  margin: 1em 1em;
+}
+
+.message {
+  text-align: center;
+}
+
+.container th h1 {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+  color: #185875;
+}
+
+.container td {
+  font-weight: normal;
+  font-size: 1.2em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	        box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+  display: table;
+  text-align: left;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2em 0 8em 0;
+}
+
+.container td, .container th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+  cursor: crosshair;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+  background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+	  background-color: #2C3446;
+}
+
+/* Avoid selection the first one*/
+.container td:first-child {
+  background-color: #1F2739;
+  color: #FB667A;
+}
+
+.container th {
+    text-align: center;
+	  background-color: #1F2739;
+}
+
+/*** marking hovering horizontal*/
+.container tr:hover:nth-child(n+1) {
+  background-color: #464A52;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+/*** marking vertical hovering
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after {
+  content: "";
+  position: absolute;
+  background-color: #464A52;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+**/
+
+.container th:hover {
+  background-color: #464A52;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	   -moz-box-shadow: 0 6px 6px -6px #0E1119;
+	        box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover:first-child {
+  color: #FB667A;
+  background-color: #464A52;
+}
+/***********High *********/
+.container td:hover:nth-child(n+2) {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+
+}
+
+/*** PLAY *****/
+
+//colors
+$input-background: rgba(57,63,84,0.8);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+.demo-flex-spacer {
+  flex-grow: 1;
+}
+
+.play_container {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  height: 10vh;
+  max-width: 400px;
+  padding: 1em 1em;
+  margin: 0 auto;
+}
+
+.webflow-style-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  max-width: 290px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 0.4rem 1rem 0.6rem;
+  background: $input-background;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
+}
+
+.webflow-style-input input {
+  flex-grow: 1;
+  color: $input-text-active;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  &::-webkiyt-input-placeholder {
+    color: $input-text-inactive;
+  }
+}
+
+.webflow-style-input button {
+  color: $input-text-inactive;
+  font-size: 2.4rem;
+  line-height: middle;
+  transition: color .25s;
+  &:hover {
+    color: $input-text-active;
+  }
+}
+
+.hit {
+  content: "hit";
+  font-size: 2em;
+  background-color: green;
+}
+.miss {
+  content: "miss";
+  font-size: 2em;
+  background-color: red;
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 65%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 50%;
+  }
+}
